@@ -6,7 +6,17 @@ namespace luke_code
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+            Console.WriteLine("Please enter a few words with spaces");
+            string userInput = Console.ReadLine().ToUpper();
+            string[] list = userInput.Split();
+
+            foreach(string item in list) 
+            {
+                Console.Write(item[0]);
+            }
+            
+            
         }
     }
 }
