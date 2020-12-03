@@ -17,3 +17,10 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: UseDotNet@2
+  displayName: 'Use .NET 5 SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '5.0.100'
+    installationPath: $(Agent.ToolsDirectory)/dotnet
